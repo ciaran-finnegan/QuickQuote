@@ -1,0 +1,21 @@
+<template name="layout">
+  <nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{pathFor 'AddQuoteData'}}"><img src=/csclogo.png>CSC Cloud Migration Services for Telstra</a>
+    </div>
+  </nav>
+  <div class="container">
+    <div id="main">
+    {{#if ifSuccessfulAddQuoteData }}
+        <h2>successfulAddQuoteData is true - wow</h2>
+    {{else}}
+      {{> AddQuoteData}}
+    {{/if}}
+    </div>
+  </div>
+
+
+
+</template>
+
+

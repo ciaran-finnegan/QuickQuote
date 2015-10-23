@@ -1,0 +1,38 @@
+<template name="AddQuoteData">
+
+    {{#if ifSuccessfulAddQuoteData }}
+        <h2>inside the template.. successfulAddQuoteData is true - wow</h2>
+    {{else}}
+
+
+  <div class="well well-sm">
+    {{> quickForm
+
+    collection="QuoteData"
+    template="bootstrap3-horizontal"
+    label-class="col-xs-3"
+    input-col-class="col-xs-8"
+    id="AddQuoteDataForm"
+    type="method"
+    meteormethod="addQuoteData"
+    resetOnSuccess=true}}
+  </div>
+    {{/if}}
+
+</template>
+
+<template name="UpdateQuoteData">
+  <div class="well">
+    {{> quickForm
+    collection="QuoteData"
+    template="bootstrap3-horizontal"
+    label-class="col-sm-3"
+    input-col-class="col-sm-8"
+
+    id="UpdateQuoteDataForm"
+    type="method-update"
+    meteormethod="updateQuoteData"
+    doc=this
+    buttonContent="Update"}}
+  </div>
+</template>
