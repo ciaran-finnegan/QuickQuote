@@ -1,13 +1,19 @@
-<template name="AddQuoteData">
+<template name="mainPage">
 
-    {{#if ifSuccessfulAddQuoteData }}
-        <h2>inside the template.. successfulAddQuoteData is true - wow</h2>
+    {{#if isSuccessfulAddQuoteData }}
+        <h2>inside the template.. successfulAddQuoteData TRUE - rendering SHOWQUOTE template</h2>
     {{else}}
 
+        <h2>inside the template.. successfulAddQuoteData NOT true - rendering AddQuoteData template</h2>
+        {{AddQuoteData}}
+    {{/if}}
 
+</template>
+
+<template name="AddQuoteData">
   <div class="well well-sm">
+      <h2>RENDEERING AddQuoteData TEMPLATE</h2>
     {{> quickForm
-
     collection="QuoteData"
     template="bootstrap3-horizontal"
     label-class="col-xs-3"
@@ -17,12 +23,12 @@
     meteormethod="addQuoteData"
     resetOnSuccess=true}}
   </div>
-    {{/if}}
 
 </template>
 
 <template name="UpdateQuoteData">
   <div class="well">
+      <h2>RENDERING UpdateQuoteData TEMPLATE</h2>
     {{> quickForm
     collection="QuoteData"
     template="bootstrap3-horizontal"
