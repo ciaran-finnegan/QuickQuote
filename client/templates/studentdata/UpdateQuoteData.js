@@ -21,8 +21,6 @@ Template.UpdateQuoteData.helpers({
         var extendedHostPrice = pricePerHost * qtyHostsToMigrate;
         var extendedMigrationEventPrice = pricePerMigrationEvent * qtyMigrationEvents;
         var totalEstimatedCharges = extendedHostPrice + extendedMigrationEventPrice;
-
-        console.log("UpdateQuoteDAta.Price function returns: ", qtyHostsToMigrate, pricePerHost, extendedHostPrice, qtyMigrationEvents, pricePerMigrationEvent, extendedMigrationEventPrice, totalEstimatedCharges);
         return [qtyHostsToMigrate.toLocaleString(), pricePerHost.toLocaleString(), extendedHostPrice.toLocaleString(), qtyMigrationEvents.toLocaleString(), pricePerMigrationEvent.toLocaleString(), extendedMigrationEventPrice.toLocaleString(), totalEstimatedCharges.toLocaleString()];
 
         return Session.set("qtyHostsToMigrate", qtyHostsToMigrate);

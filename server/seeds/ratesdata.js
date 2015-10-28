@@ -6,7 +6,7 @@
  * @type {*[]}
  */
 var rateData = [
-    {host: "850", migrationEvent50: "37000", migrationEvent100: "42000", migrationEvent150: "48000", migrationEvent200: "58000", }
+    {host: "935", migrationEvent50: "40700", migrationEvent100: "46200", migrationEvent150: "52800", migrationEvent200: "63800" }
 ];
 
 /**

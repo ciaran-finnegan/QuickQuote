@@ -4,9 +4,7 @@
 
 AutoForm.addHooks('AddQuoteDataForm', {
     onSuccess: function () {
-        console.log("running after addhook for AddQuoteDataForm insert!", Session.get('successfulAddQuoteData'));
-        console.log("running after addhook for AddQuoteDataForm insert! - docID: ", this.docID);
-        console.log("running after addhook for AddQuoteDataForm insert! - this._id: ", this._id);
+        // not working well, need to look at this..
 
        // Router.go('UpdateQuoteData',{_id: this.docID});
         // return Session.set('successfulAddQuoteData', true);
