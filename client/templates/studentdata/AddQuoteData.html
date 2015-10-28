@@ -1,0 +1,47 @@
+<template name="mainPage">
+        {{> AddQuoteData}}
+</template>
+<template name="AddQuoteData">
+  <div class="well well-sm">
+    {{> quickForm
+    collection="QuoteData"
+    template="bootstrap3-horizontal"
+    label-class="col-xs-3"
+    input-col-class="col-xs-8"
+    id="AddQuoteDataForm"
+    type="method"
+    meteormethod="addQuoteData"
+    resetOnSuccess=false}}
+  </div>
+
+</template>
+
+
+
+
+<template name="exampleModal">
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal example</h4>
+                </div>
+
+                <div class="modal-body">
+                    <p>A modal example.</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="test">
+    <h3> TEST TEMPLATE</h3>
+
+</template>

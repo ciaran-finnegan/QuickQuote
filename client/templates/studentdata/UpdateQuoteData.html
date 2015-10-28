@@ -1,0 +1,33 @@
+<template name="UpdateQuoteData">
+    <div class="well">
+
+        <h4> Budgetary Estimate</h4>
+        <h5> {{Price.[0]}} host migrations @ ${{Price.[1]}} per host = ${{Price.[2]}}</h5>
+        <h5> {{Price.[3]}} migration events @ ${{Price.[4]}} per event = ${{Price.[5]}}</h5>
+        <h4> Total Estimated Charges AUD ${{Price.[6]}} ex. GST</h4>
+        {{> quickForm
+        collection="QuoteData"
+        template="bootstrap3-horizontal"
+        label-class="col-sm-3"
+        input-col-class="col-sm-8"
+
+        id="UpdateQuoteDataForm"
+        type="method-update"
+        meteormethod="updateQuoteData"
+        doc=this
+        buttonContent="Update"}}
+    </div>
+</template>
+
+<template name="debugging">
+
+<h4> Name : {{CurrentFormData.name}}</h4>
+<h4> E-mail : {{CurrentFormData.email}}</h4>
+<h4> Request Contact : {{CurrentFormData.canContact}}</h4>
+<h4> Project Details : {{CurrentFormData.bio}}</h4>
+<h4> Target Cloud : {{CurrentFormData.targetCloud}}</h4>
+<h4> Qty. Host Migrations per Migration Event : {{CurrentFormData.level}}</h4>
+<h4> Qty. Host Migrations : {{CurrentFormData.standardMigration}}</h4>
+<h4> Operating Systems : {{CurrentFormData.operatingSystems}}</h4>
+<h3> CurrentFormDocID : {{CurrentFormDocID}}</h3>
+</template>
