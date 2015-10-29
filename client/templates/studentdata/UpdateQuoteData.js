@@ -21,7 +21,7 @@ Template.UpdateQuoteData.helpers({
         var extendedHostPrice = pricePerHost * qtyHostsToMigrate;
         var extendedMigrationEventPrice = pricePerMigrationEvent * qtyMigrationEvents;
         var totalEstimatedCharges = extendedHostPrice + extendedMigrationEventPrice;
-        return [qtyHostsToMigrate.toLocaleString(), pricePerHost.toLocaleString(), extendedHostPrice.toLocaleString(), qtyMigrationEvents.toLocaleString(), pricePerMigrationEvent.toLocaleString(), extendedMigrationEventPrice.toLocaleString(), totalEstimatedCharges.toLocaleString()];
+        return [qtyHostsToMigrate, pricePerHost.formatMoney(), extendedHostPrice.formatMoney(), qtyMigrationEvents, pricePerMigrationEvent.formatMoney(), extendedMigrationEventPrice.formatMoney(), totalEstimatedCharges.formatMoney()];
 
         return Session.set("qtyHostsToMigrate", qtyHostsToMigrate);
     }

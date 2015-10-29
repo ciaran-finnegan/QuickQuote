@@ -4,6 +4,7 @@
 Meteor.methods({
     sendEmail: function (to, cc, from, subject, text) {
         check([to, cc, from, subject, text], [String]);
+        console.log("sendEmail Server Method: to, cc, from, subject, text)")
 
         // Let other method calls from the same client start running,
         // without waiting for the email sending to complete.
