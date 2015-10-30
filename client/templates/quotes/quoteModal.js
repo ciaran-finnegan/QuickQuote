@@ -1,8 +1,7 @@
 /**
- * Created by cfinnegan on 25/10/15.
+ * Created by cfinnegan on 30/10/15.
  */
-
-Template.UpdateQuoteData.helpers({
+Template.quoteModal.helpers({
     'CurrentFormDocID': function () {
         return Session.get('CurrentFormDocID');
     },
@@ -26,4 +25,3 @@ Template.UpdateQuoteData.helpers({
         return Session.set("qtyHostsToMigrate", qtyHostsToMigrate);
     }
 });
-

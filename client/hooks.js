@@ -42,3 +42,13 @@ Template.AddQuoteData.destroyed = function () {
 };
 
 
+
+AutoForm.hooks({
+    UpdateQuoteDataForm: {
+        onSubmit: function (insertDoc, updateDoc, currentDoc) {
+            Modal.show('quoteModal');
+        }
+    }
+});
+
+

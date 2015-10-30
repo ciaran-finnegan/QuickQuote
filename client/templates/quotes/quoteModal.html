@@ -1,0 +1,55 @@
+<template name="quoteModal">
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Budgetary Estimate</h4>
+                </div>
+
+                <div class="modal-body">
+                    <p></p>
+                </div>
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Unit Rate</th>
+                            <th>Price</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Host Migrations</td>
+                            <td><p class="text-center">{{Price.[0]}}</p></td>
+                            <td>{{Price.[1]}}</td>
+                            <td>{{Price.[2]}}</td>
+                        </tr>
+                        <tr>
+                            <td>Migration Events</td>
+                            <td><p class="text-center">{{Price.[0]}}</p></td>
+                            <td>{{Price.[4]}}</td>
+                            <td>{{Price.[5]}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td><strong>Total Estimated Charges</strong></td>
+                            <td><strong>{{Price.[6]}}</strong></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                <span></span>
+                <h6><small> Preliminary cloud migration pricing is provided for budgetary purposes only and is subject to review of scope and final review by CSC prior to acceptance. The price stated is for Telstra customers and is provided on a non binding, subject to contract basis.</small></h6>
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</template>
